@@ -1,0 +1,7 @@
+{
+  "name": "career-ops",
+  "version": "0.1.0",
+  "description": "A job-search operating system for Claude: set up a candidate profile and tracker, find and rank live roles, vet employers for layoff risk and green-card track record, build tailored one-page resumes, and fill applications in Chrome with hard safety guardrails.",
+  "author": { "name": "Srujan Ponnur" },
+  "keywords": ["job search", "applications", "resume", "ATS", "Greenhouse", "Ashby", "Lever", "Workday", "H-1B", "I-140"]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "ALEX EXAMPLE",
+  "contact": ["+1 555-555-0100", "alex@example.com", {"text": "linkedin.com/in/alexexample", "url": "https://www.linkedin.com/in/alexexample/"}, "Seattle, WA"],
+  "summary": "Senior software engineer (6+ yrs, Java and TypeScript) building distributed systems and developer platforms on AWS.",
+  "skills": [
+    ["Languages:", "Java 21, TypeScript, Python, SQL"],
+    ["Backend:", "Spring Boot 3, gRPC, Kafka, PostgreSQL"],
+    ["Cloud:", "AWS Lambda, Kinesis, ECS Fargate, DynamoDB"]
+  ],
+  "experience": [
+    {
+      "title": "Senior Software Engineer",
+      "org": "Example Corp (Product Name) - Seattle, WA",
+      "dates": "Jul 2024 – Present",
+      "bullets": [
+        "Built a **Java 21 ingestion service** on **Kinesis** sized for **200 msg/s at under 100 ms p99**, with replay and zero data loss.",
+        "Created a **schema-driven React framework** replacing **100+ hand-built screens**."
+      ]
+    }
+  ],
+  "education": [
+    {"school": "Example University, City, ST", "dates": "Aug 2021 – May 2023", "line": "Master of Science in Computer Science, **GPA: 4.0**"}
+  ],
+  "author": "Alex Example"
+}

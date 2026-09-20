@@ -1,0 +1,86 @@
+# career-ops profile — single source of truth for the candidate's facts and rules.
+# Every field is the candidate's own confirmed answer. null = unknown: STOP, never invent.
+updated: YYYY-MM-DD
+
+candidate:
+  full_name: ""
+  preferred_first_name: ""
+  email: ""
+  phone: ""                 # store without formatting; note: Workday rejects "+1" when country code is a separate field
+  location_display: ""      # what to put in "current location" fields, e.g. "Seattle, WA"
+  address:
+    street: null
+    city: null
+    state: null
+    postal_code: null
+    country: ""
+  linkedin: ""
+  github: ""
+  portfolio: ""
+  years_experience: 0
+  current_role:
+    title: ""
+    employer: ""
+    product_public_name: ""   # the name that may appear publicly
+    internal_names_never_public: []
+    location: ""
+    start: "MM/YYYY"
+  work_history:             # newest first; true dates — autofill parsers get these wrong
+    - { title: "", employer: "", location: "", start: "MM/YYYY", end: "MM/YYYY or present" }
+  education:
+    - { school: "", location: "", degree: "", field: "", gpa: "", start: "MM/YYYY", end: "MM/YYYY" }
+
+work_authorization:
+  status: ""                # e.g. "H-1B, year 1 of 6"
+  authorized_to_work_in_country: true
+  authorized_for_any_employer_without_sponsorship: false
+  needs_sponsorship: true
+  sponsorship_sentence: ""  # exact text for free-text sponsorship fields
+  green_card_priority: false  # true => weight employer PERM/I-140 record when ranking
+
+targets:
+  lanes: []                 # e.g. ["Seattle big tech", "AI labs", "developer tooling"]
+  level_floor: ""
+  level_ceiling: ""         # e.g. "Senior or Staff IC. Never Senior Staff, Principal, Distinguished, Architect, Manager, Director."
+  in_scope_titles_note: ""  # e.g. "Founding Engineer and Member of Technical Staff are in scope"
+  max_years_required: 10    # skip reqs demanding more
+  locations:
+    preferred: []
+    remote_ok: true
+    hybrid_ok: true
+    in_office_ok: true
+    relocation_ok: false
+  comp:
+    base_floor: 0
+    target_total: 0
+    salary_field_answer: "" # e.g. "165000" or "Open / negotiable"
+  avoid_companies: []
+  how_did_you_hear_default: "LinkedIn"
+
+resume_variants:            # role type -> file in career-ops/resume/
+  default: ""
+  # backend: "First_Last_Resume_Backend.pdf"
+  # fullstack: "First_Last_Resume_FullStack.pdf"
+  # ai_tooling: "First_Last_Resume_AI_Tooling.pdf"
+
+eeo:                        # candidate's own choices, or "prefer not to answer"
+  gender: "prefer not to answer"
+  race_ethnicity: "prefer not to answer"
+  hispanic_latino: "prefer not to answer"
+  veteran: "prefer not to answer"
+  disability: "prefer not to answer"
+  sexual_orientation: "prefer not to answer"
+  transgender: "prefer not to answer"
+  age_bracket: "prefer not to answer"
+
+policies:
+  submit_policy: stop_before_submit   # or auto_submit
+  submit_policy_quote: ""             # user's exact words + date, required for auto_submit
+  cover_letter: only_if_tailored
+  free_text_tone: "plain, first person, specific numbers, name gaps honestly"
+  chrome_device_id: ""                # chosen by the user when several Chrome browsers are connected
+
+re_apply_windows:           # company -> earliest date to apply again
+  # ExampleCo: "2026-12-01"
+
+missing: []                 # fields that are null and will block some forms

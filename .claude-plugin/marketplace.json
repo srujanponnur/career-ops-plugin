@@ -1,0 +1,16 @@
+{
+  "name": "career-ops",
+  "owner": { "name": "Srujan Ponnur" },
+  "metadata": {
+    "description": "A job-search operating system for Claude: profile and tracker setup, live role sourcing and ranking, employer layoff and green-card vetting, one-page resume variants, and guarded application filling in Chrome."
+  },
+  "plugins": [
+    {
+      "name": "career-ops",
+      "source": "./plugins/career-ops",
+      "description": "Set up a candidate profile and tracker, find and rank live roles, vet employers for layoff risk and green-card record, build tailored resumes, and fill applications in Chrome with hard safety guardrails.",
+      "version": "0.1.0",
+      "keywords": ["job search", "resume", "applications", "ATS", "H-1B"]
+    }
+  ]
+}
